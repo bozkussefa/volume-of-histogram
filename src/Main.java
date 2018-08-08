@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] input = {3,8,0,2,6,5};
+        int[] input = {6,0,3};
         List<Integer> inputList = new ArrayList<>();
         for (int i : input)
             inputList.add(i);
@@ -131,7 +131,7 @@ public class Main {
             volumeUnderWater += inputList.get(i);
 
 
-        return inputList.get(indexOfSecondLocalMax) * Math.abs(indexOfFirstLocalMax - indexOfSecondLocalMax) - volumeUnderWater;
+        return inputList.get(indexOfSecondLocalMax) * (Math.abs(indexOfFirstLocalMax - indexOfSecondLocalMax)-1) - volumeUnderWater;
     }
 
 }
